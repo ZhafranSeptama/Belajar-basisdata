@@ -5,25 +5,25 @@ Create database data_rumahsakit_bhakti ;
 
 -- table pasien 063
 create	table pasien063 (
-	id_pasien varchar(10) primary key,
+    id_pasien varchar(10) primary key,
     Nama_Pasien varchar(100)    
 );
 
 -- table Kategori layanan 063
 create	table Kategori_Layanan063 (
-	id_Kategori varchar(10) primary key,
+    id_Kategori varchar(10) primary key,
     Nama_Kategori varchar(100)    
 );
 
 -- table Unit 063
 create	table Unit063 (
-	id_Unit varchar(10) primary key,
+    id_Unit varchar(10) primary key,
     Nama_Unit varchar(100)    
 );
 
 -- table layanan 063
 create	table Layanan063 (
-	id_Layanan varchar(10) primary key,
+    id_Layanan varchar(10) primary key,
     Nama_layanan varchar(100),
     biaya int,
     id_kategori varchar(10),
@@ -34,7 +34,7 @@ create	table Layanan063 (
 
 -- table transaksi 063
 create	table transaksi063 (
-	id_transaksi varchar(10) primary key,
+    id_transaksi varchar(10) primary key,
     id_Pasien varchar(10),
     Tanggal date,
     jam time,
@@ -43,8 +43,8 @@ create	table transaksi063 (
 
 -- item transaksi 063
 create	table Item_transaksi063 (
-	id_item int auto_increment primary key,
-	id_transaksi varchar(10),
+    id_item int auto_increment primary key,
+    id_transaksi varchar(10),
     id_Layanan varchar(10),
     Jumlah int,
     foreign key (id_transaksi) references transaksi063(id_transaksi),
